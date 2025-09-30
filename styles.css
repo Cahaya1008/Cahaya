@@ -15,10 +15,10 @@ body {
 
 /* ---------------- Header ---------------- */
 .site-header {
-  background: #0b5;        /* dark teal for visibility */
+  background: #1e3a8a;  /* dark blue instead of green */
   color: white;
   padding: 1rem 0;
-  position: sticky;        /* stays on top */
+  position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -26,7 +26,6 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
 .site-header .brand {
   font-weight: 700;
   font-size: 1.5rem;
