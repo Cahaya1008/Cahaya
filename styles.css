@@ -53,51 +53,23 @@ body {
 }
 
 /* ---------------- Hero Section ---------------- */
-#hero {
-  background: linear-gradient(120deg, #3b82f6, #2563eb);
-  color: white;
-  text-align: center;
-  padding: 6rem 1rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  position: relative;
-}
+<!-- Hero Section with Video Background -->
+<section id="hero">
+  <!-- Background video -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="videos/piano.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-#hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
+  <!-- Overlay for readability -->
+  <div class="hero-overlay"></div>
 
-#hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
-
-#hero .button {
-  display: inline-block;
-  background: #ffd166;
-  color: #1e3a8a;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s, color 0.3s, transform 0.2s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-#hero .button:hover {
-  background: #ffb700;
-  color: white;
-  transform: translateY(-2px);
-}
-
-.hero-img {
-  width: 150px;
-  border-radius: 50%;
-  margin-top: 1.5rem;
-  border: 4px solid white;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
+  <!-- Hero content -->
+  <h1>Hi, I’m Bright Ye</h1>
+  <p>I’m a prospective college student passionate about biology and coding. Welcome to my portfolio!</p>
+  <a href="resume.pdf" class="button">Download Resume</a>
+  <img src="images/headshot.jpg" alt="Bright Ye" class="hero-img">
+</section>
 
 /* ---------------- Sections ---------------- */
 section {
