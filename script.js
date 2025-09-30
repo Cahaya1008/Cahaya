@@ -1,9 +1,15 @@
-document.getElementById('year').textContent = new Date().getFullYear();
-// optional: smooth scroll for internal links
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click', e=>{
-    const id = a.getAttribute('href').slice(1);
-    const el = document.getElementById(id);
-    if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+// Fade in sections on scroll
+const sections = document.querySelectorAll('section');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
   });
-});
+}, { threshold: 0.1 });
+
+sections.forEach(section => observer.observe(section));
+
+// Auto-update year in footer
+document.getElementById('year').textContent = new Date().getFullYear();
