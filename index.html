@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>First Last — Portfolio</title>
+  <meta name="description" content="First Last — prospective student (major). Projects, resume, contact."/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">First Last</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section id="about">
+      <h2>About</h2>
+      <p>Hi — I'm <strong>First Last</strong>, a prospective college applicant interested in [your major]. Short, 2–3 sentence academic summary: what you study, proud achievement, what you want to do in college.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Project Title</h3>
+          <p>One-sentence summary. Tools: Python, HTML, etc. Your role and outcome.</p>
+          <p><a href="https://github.com/yourname/project" target="_blank" rel="noopener">Code</a> · <a href="#">Live demo</a></p>
+        </article>
+        <!-- Duplicate cards as needed -->
+      </div>
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <p>Download: <a href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></p>
+      <ul>
+        <li>GPA (if you want)</li>
+        <li>Top achievements</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+
+      <!-- Netlify-ready form (optional) -->
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        <label>
+          Your name <input name="name" required>
+        </label>
+        <label>
+          Message <textarea name="message" required></textarea>
+        </label>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> First Last — portfolio</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
