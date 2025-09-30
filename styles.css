@@ -1,24 +1,24 @@
-/* General page styles */
+/* ---------------- General page styles ---------------- */
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   margin: 0;
-  background: #f0f2f5; /* soft light gray */
+  background: #f0f2f5; /* soft light gray for sides */
   color: #111;
 }
 
 .container {
   width: 90%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Header */
+/* ---------------- Header ---------------- */
 .site-header {
-  background: #0b5;   /* dark teal/green so text stands out */
-  color: white;        /* ensures any default text is visible */
+  background: #0b5;        /* dark teal for visibility */
+  color: white;
   padding: 1rem 0;
-  position: sticky;
+  position: sticky;        /* stays on top */
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -47,10 +47,10 @@ body {
 }
 
 .site-header nav a:hover {
-  color: #fff7c0;  /* subtle hover effect */
+  color: #fff7c0;
 }
 
-/* Hero section */
+/* ---------------- Hero Section ---------------- */
 #hero {
   background: linear-gradient(120deg, #0b5, #0b8);
   color: white;
@@ -70,32 +70,34 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Make hero buttons stand out */
 #hero .button {
   display: inline-block;
-  background: #fff;
+  background: white;
   color: #0b5;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
 }
 
 #hero .button:hover {
-  background: #0b8;
+  background: #09a;
   color: white;
+  transform: translateY(-2px);
 }
 
-/* About and other sections */
+/* ---------------- Sections (About, Projects, Resume, Contact) ---------------- */
 section {
-  background: #fff;
-  padding: 3rem 1rem;
+  background: white;
+  padding: 3rem 2rem;
   margin-bottom: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Projects grid */
+/* ---------------- Projects Grid ---------------- */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -115,52 +117,11 @@ section {
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
-/* Footer */
-.site-footer {
-  text-align: center;
-  padding: 2rem 0;
-  background: #222;
-  color: white;
-}
-
-.site-header {
-  background: #0b5;        /* dark green / teal accent */
-  color: white;
-  padding: 1rem 0;
-  position: sticky;        /* stays on top while scrolling */
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.site-header .brand {
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-left: 1rem;
-}
-
-.site-header nav {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1.5rem;
-  margin-right: 1rem;
-}
-
-.site-header nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.site-header nav a:hover {
-  color: #fff7c0;   /* subtle hover effect */
-}
-
+/* ---------------- Buttons (Other than hero) ---------------- */
 .button {
   display: inline-block;
-  background: #0b5;      /* primary accent color */
-  color: white;           /* text color */
+  background: #0b5;
+  color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   text-decoration: none;
@@ -169,11 +130,14 @@ section {
 }
 
 .button:hover {
-  background: #09a;       /* darker shade on hover */
-  transform: translateY(-2px); /* subtle lift effect */
+  background: #09a;
+  transform: translateY(-2px);
 }
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+
+/* ---------------- Footer ---------------- */
+.site-footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: #222;
+  color: white;
 }
