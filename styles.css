@@ -15,10 +15,10 @@ body {
 
 /* Header */
 .site-header {
-  background: #0b5;      /* dark teal so it’s visible */
-  color: white;
+  background: #0b5;   /* dark teal/green so text stands out */
+  color: white;        /* ensures any default text is visible */
   padding: 1rem 0;
-  position: sticky;      /* stays on top while scrolling */
+  position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
