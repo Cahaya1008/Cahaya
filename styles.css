@@ -15,24 +15,39 @@ body {
 
 /* Header */
 .site-header {
-  background: #0b5;
+  background: #0b5;      /* dark teal so it’s visible */
   color: white;
   padding: 1rem 0;
-  position: sticky;
+  position: sticky;      /* stays on top while scrolling */
   top: 0;
   z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header .brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-right: 1rem;
 }
 
 .site-header nav a {
   color: white;
   text-decoration: none;
-  margin-left: 1.5rem;
   font-weight: 600;
   transition: color 0.3s;
 }
 
 .site-header nav a:hover {
-  color: #fff7c0;
+  color: #fff7c0;  /* subtle hover effect */
 }
 
 /* Hero section */
