@@ -71,3 +71,11 @@ nav a:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
+#hero {
+  background: linear-gradient(120deg, #0b5, #0b8);
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
