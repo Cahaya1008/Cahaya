@@ -6,19 +6,14 @@
   <title>Bright Ye — Portfolio</title>
   <meta name="description" content="Bright Ye — prospective student in Neuroscience and Biological Sciences. Projects, resume, contact."/>
   
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  
-  <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Skip link for accessibility -->
   <a class="skip" href="#main">Skip to content</a>
   
-  <!-- Header -->
   <header class="site-header">
     <div class="container">
       <h1 class="brand">Bright Ye</h1>
@@ -31,35 +26,24 @@
     </div>
   </header>
 
-  <!-- Main Content -->
   <main id="main" class="container">
-    <!-- Hero Section -->
     <section id="hero">
-      <!-- Background video -->
       <video autoplay muted loop playsinline class="hero-video">
         <source src="videos/piano.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      
-      <!-- Overlay -->
       <div class="hero-overlay"></div>
-      
-      <!-- Hero Text -->
       <h1>Hi, I’m Bright Ye</h1>
       <p>I’m a prospective college student passionate about biology and coding. Welcome to my portfolio!</p>
       <a href="resume.pdf" class="button">Download Resume</a>
     </section>
 
-    <!-- About Section -->
     <section id="about">
       <h2>About</h2>
-      <p>Hi — I'm <strong>Bright Ye</strong>, a prospective college applicant interested in neuroscience and biological sciences. I am part of the International Baccalaureate program, taking Higher Level biology, math and chemistry, and taking Standard Level English, Global Politics, and Spanish. I hope to become a doctor in the future to help our community and support vulnerable populations.</p>
-      
-      <!-- Optional cat photo -->
+      <p>Hi — I'm <strong>Bright Ye</strong>, a prospective college applicant interested in neuroscience and biological sciences. I am part of the IB program, taking Higher Level biology, math and chemistry, and Standard Level English, Global Politics, and Spanish. I hope to become a doctor to help our community and support vulnerable populations.</p>
       <img src="images/cat.jpg" alt="My cat" class="cat-photo">
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
       <h2>Projects</h2>
       <div class="grid">
@@ -78,7 +62,6 @@
       </div>
     </section>
 
-    <!-- Resume Section -->
     <section id="resume">
       <h2>Resume</h2>
       <p>Download: <a href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></p>
@@ -88,48 +71,27 @@
       </ul>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:bright.ye.100808@gmail.com">bright.ye.100808@gmail.com</a></p>
-
-      <!-- Netlify-ready form -->
       <form name="contact" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
-        <label>
-          Your name <input name="name" required>
-        </label>
-        <label>
-          Message <textarea name="message" required></textarea>
-        </label>
+        <label>Your name <input name="name" required></label>
+        <label>Message <textarea name="message" required></textarea></label>
         <button type="submit" class="button">Send</button>
       </form>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <small>© <span id="year"></span> Bright Ye — portfolio</small>
     </div>
   </footer>
 
-  <!-- JavaScript -->
   <script src="script.js"></script>
   <script>
-    // Update year dynamically
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Fade-in sections on scroll
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
-    sections.forEach(section => observer.observe(section));
   </script>
 </body>
 </html>
