@@ -1,11 +1,9 @@
-/* ---------------- General Page Styles ---------------- */
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   margin: 0;
-  background: #f5f6fa; /* soft light gray for sides */
+  background: #f0f2f5;
   color: #111;
-  scroll-behavior: smooth; /* smooth scroll for nav links */
 }
 
 .container {
@@ -14,175 +12,45 @@ body {
   margin: 0 auto;
 }
 
-/* ---------------- Header ---------------- */
+/* Header */
 .site-header {
-  background: #1e3a8a;        /* deep professional blue */
+  background: #0b8;  
   color: white;
   padding: 1rem 0;
-  position: sticky;            /* sticky header */
+  position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+.site-header .brand { font-weight: 700; font-size: 1.5rem; margin-left: 1rem; }
+.site-header nav { display: flex; gap: 1.5rem; margin-right: 1rem; }
+.site-header nav a { color: white; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+.site-header nav a:hover { color: #fff7c0; }
 
-.site-header .brand {
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-left: 1rem;
-}
+/* Hero */
+#hero { position: relative; text-align: center; padding: 6rem 1rem; color: white; border-radius: 12px; margin-bottom: 2rem; }
+.hero-video { position: absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:1; border-radius: 12px; }
+.hero-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); z-index:2; border-radius:12px; }
+#hero h1, #hero p, #hero .button { position: relative; z-index:3; }
+#hero h1 { font-size:3rem; margin-bottom:1rem; }
+#hero p { font-size:1.25rem; margin-bottom:2rem; }
+#hero .button { display:inline-block; background:#fff; color:#0b8; padding:0.6rem 1.2rem; border-radius:6px; text-decoration:none; font-weight:600; transition: background 0.3s, color 0.3s; }
+#hero .button:hover { background:#0b8; color:white; }
 
-.site-header nav {
-  display: flex;
-  gap: 1.5rem;
-  margin-right: 1rem;
-}
+/* About */
+.cat-photo { width:200px; border-radius:12px; margin-top:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
+section { background:#fff; padding:3rem 1rem; margin-bottom:2rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
 
-.site-header nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s, transform 0.2s;
-}
+/* Projects */
+.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem; }
+.card { background:#fff; padding:1.5rem; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); transition:transform 0.3s, box-shadow 0.3s; }
+.card:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.12); }
 
-.site-header nav a:hover {
-  color: #ffd166; /* golden hover */
-  transform: translateY(-2px);
-}
+/* Footer */
+.site-footer { text-align:center; padding:2rem 0; background:#222; color:white; }
 
-/* ---------------- Hero Section with Video ---------------- */
-#hero {
-  position: relative;
-  text-align: center;
-  padding: 6rem 1rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  overflow: hidden; /* clip video */
-  color: white;
-}
-
-/* Video background */
-.hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* fills hero section nicely */
-  z-index: 0;
-  filter: brightness(0.5); /* darken video for readability */
-}
-
-/* Overlay for extra contrast */
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.2); /* subtle dark overlay */
-  z-index: 1;
-}
-
-/* Hero content above video */
-#hero h1,
-#hero p,
-#hero .button {
-  position: relative;
-  z-index: 2; /* above video & overlay */
-}
-
-/* Hero button styling */
-#hero .button {
-  display: inline-block;
-  background: #ffd166; /* golden accent */
-  color: #1e3a8a;      /* matches header blue */
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-#hero .button:hover {
-  background: #ffb700;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
-
-/* ---------------- Sections (About, Projects, Resume, Contact) ---------------- */
-section {
-  background: white;
-  padding: 3rem 2rem;
-  margin-bottom: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  opacity: 0; /* for fade-in animation */
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ---------------- Projects Grid ---------------- */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-/* ---------------- Buttons (Other Sections) ---------------- */
-.button {
-  display: inline-block;
-  background: #1e3a8a; /* header-blue buttons */
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.button:hover {
-  background: #2563eb; /* slightly lighter blue */
-  transform: translateY(-2px);
-}
-
-/* ---------------- Footer ---------------- */
-.site-footer {
-  text-align: center;
-  padding: 2rem 0;
-  background: #1f2937; /* dark gray footer */
-  color: white;
-}
-
-/* ---------------- Responsive Adjustments ---------------- */
-@media (max-width: 600px) {
-  #hero h1 {
-    font-size: 2rem;
-  }
-
-  #hero p {
-    font-size: 1rem;
-  }
-}
+/* Buttons */
+.button { display:inline-block; background:#0b8; color:white; padding:0.6rem 1.2rem; border-radius:6px; text-decoration:none; font-weight:600; transition:background 0.3s, transform 0.2s; }
+.button:hover { background:#09a; transform:translateY(-2px); }
