@@ -27,6 +27,8 @@
   </header>
 
   <main id="main" class="container">
+
+    <!-- Hero Section -->
     <section id="hero">
       <video autoplay muted loop playsinline class="hero-video">
         <source src="videos/piano.mp4" type="video/mp4">
@@ -38,12 +40,14 @@
       <a href="resume.pdf" class="button">Download Resume</a>
     </section>
 
+    <!-- About Section -->
     <section id="about">
       <h2>About</h2>
-      <p>Hi — I'm <strong>Bright Ye</strong>, a prospective college applicant interested in neuroscience and biological sciences. I am part of the IB program, taking Higher Level biology, math and chemistry, and Standard Level English, Global Politics, and Spanish. I hope to become a doctor to help our community and support vulnerable populations.</p>
+      <p>Hi — I'm <strong>Bright Ye</strong>, a prospective college applicant interested in neuroscience and biological sciences. I am part of the IB program, taking Higher Level biology, math, and chemistry, and Standard Level English, Global Politics, and Spanish. I hope to become a doctor to help our community and support vulnerable populations.</p>
       <img src="images/cat.jpg" alt="My cat" class="cat-photo">
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
       <h2>Projects</h2>
       <div class="grid">
@@ -51,17 +55,41 @@
           <h3>Project Name</h3>
           <p>A one-sentence description of what this project does.</p>
           <p><strong>Tools:</strong> Python, HTML, CSS</p>
-          <a href="#">View Project →</a>
+          <a href="#project1-detail">View Project →</a>
         </article>
         <article class="card">
           <h3>Another Project</h3>
           <p>A short summary of what you built.</p>
           <p><strong>Tools:</strong> JavaScript, React</p>
-          <a href="#">View Project →</a>
+          <a href="#project2-detail">View Project →</a>
         </article>
       </div>
     </section>
 
+    <!-- Project Detail Sections -->
+    <section id="project1-detail">
+      <h2>Project Name — Details</h2>
+      <p>Detailed description of Project 1. Include screenshots, code snippets, and features.</p>
+      <ul>
+        <li>Feature 1</li>
+        <li>Feature 2</li>
+        <li>What I learned</li>
+      </ul>
+      <a href="#projects" class="button">Back to Projects</a>
+    </section>
+
+    <section id="project2-detail">
+      <h2>Another Project — Details</h2>
+      <p>Detailed description of Project 2. Include screenshots, code snippets, and features.</p>
+      <ul>
+        <li>Feature A</li>
+        <li>Feature B</li>
+        <li>What I learned</li>
+      </ul>
+      <a href="#projects" class="button">Back to Projects</a>
+    </section>
+
+    <!-- Resume Section -->
     <section id="resume">
       <h2>Resume</h2>
       <p>Download: <a href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></p>
@@ -71,6 +99,7 @@
       </ul>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:bright.ye.100808@gmail.com">bright.ye.100808@gmail.com</a></p>
@@ -81,6 +110,7 @@
         <button type="submit" class="button">Send</button>
       </form>
     </section>
+
   </main>
 
   <footer class="site-footer">
