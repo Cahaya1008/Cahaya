@@ -3,8 +3,9 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   margin: 0;
-  background: #f5f6fa; /* soft light gray for sides */
+  background: #f5f6fa;
   color: #111;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -15,10 +16,10 @@ body {
 
 /* ---------------- Header ---------------- */
 .site-header {
-  background: #1e3a8a;        /* modern deep blue */
+  background: #1e3a8a;
   color: white;
   padding: 1rem 0;
-  position: sticky;            /* stays on top */
+  position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -43,21 +44,23 @@ body {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.2s;
 }
 
 .site-header nav a:hover {
-  color: #ffd166;  /* golden hover for contrast */
+  color: #ffd166;
+  transform: translateY(-2px);
 }
 
 /* ---------------- Hero Section ---------------- */
 #hero {
-  background: linear-gradient(120deg, #3b82f6, #2563eb); /* soft blue gradient */
+  background: linear-gradient(120deg, #3b82f6, #2563eb);
   color: white;
   text-align: center;
   padding: 6rem 1rem;
   border-radius: 12px;
   margin-bottom: 2rem;
+  position: relative;
 }
 
 #hero h1 {
@@ -72,28 +75,45 @@ body {
 
 #hero .button {
   display: inline-block;
-  background: #ffd166; /* golden accent for hero buttons */
-  color: #1e3a8a;     /* matches header color */
+  background: #ffd166;
+  color: #1e3a8a;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   transition: background 0.3s, color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 #hero .button:hover {
-  background: #ffb700; 
+  background: #ffb700;
   color: white;
   transform: translateY(-2px);
 }
 
-/* ---------------- Sections (About, Projects, Resume, Contact) ---------------- */
+.hero-img {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 1.5rem;
+  border: 4px solid white;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* ---------------- Sections ---------------- */
 section {
   background: white;
   padding: 3rem 2rem;
   margin-bottom: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ---------------- Projects Grid ---------------- */
@@ -116,10 +136,10 @@ section {
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
-/* ---------------- Buttons (Other than hero) ---------------- */
+/* ---------------- Buttons (Other) ---------------- */
 .button {
   display: inline-block;
-  background: #1e3a8a;      /* header-blue buttons */
+  background: #1e3a8a;
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
@@ -129,7 +149,7 @@ section {
 }
 
 .button:hover {
-  background: #2563eb;       /* slightly lighter blue */
+  background: #2563eb;
   transform: translateY(-2px);
 }
 
@@ -137,6 +157,6 @@ section {
 .site-footer {
   text-align: center;
   padding: 2rem 0;
-  background: #1f2937;  /* dark gray footer */
+  background: #1f2937;
   color: white;
 }
