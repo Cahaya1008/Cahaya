@@ -1,9 +1,14 @@
+/* General page styles */
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   margin: 0;
   background: #f0f2f5;
   color: #111;
+}
+
+html {
+  scroll-behavior: smooth; /* smooth scroll for project links */
 }
 
 .container {
@@ -14,7 +19,7 @@ body {
 
 /* Header */
 .site-header {
-  background: #0b8;  
+  background: #0b8;
   color: white;
   padding: 1rem 0;
   position: sticky;
@@ -24,44 +29,70 @@ body {
   justify-content: space-between;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 .site-header .brand { font-weight: 700; font-size: 1.5rem; margin-left: 1rem; }
 .site-header nav { display: flex; gap: 1.5rem; margin-right: 1rem; }
 .site-header nav a { color: white; text-decoration: none; font-weight: 600; transition: color 0.3s; }
 .site-header nav a:hover { color: #fff7c0; }
 
 /* Hero */
-#hero { position: relative; text-align: center; padding: 6rem 1rem; color: white; border-radius: 12px; margin-bottom: 2rem; }
+#hero {
+  position: relative;
+  text-align: center;
+  padding: 7rem 1rem;
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
 .hero-video {
   position: absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: center 70%; /* <-- moves focus lower */
-  z-index:1;
+  object-position: center 70%; /* adjust vertical focus */
+  z-index: 1;
   border-radius: 12px;
 }
 
-.hero-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); z-index:2; border-radius:12px; }
-#hero h1, #hero p, #hero .button { position: relative; z-index:3; }
-#hero h1 { font-size:3rem; margin-bottom:1rem; }
-#hero p { font-size:1.25rem; margin-bottom:2rem; }
-#hero .button { display:inline-block; background:#fff; color:#0b8; padding:0.6rem 1.2rem; border-radius:6px; text-decoration:none; font-weight:600; transition: background 0.3s, color 0.3s; }
-#hero .button:hover { background:#0b8; color:white; }
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  z-index: 2;
+  border-radius: 12px;
+}
+
+#hero h1, #hero p, #hero .button { position: relative; z-index: 3; }
+#hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+#hero p { font-size: 1.25rem; margin-bottom: 2rem; }
+#hero .button { display: inline-block; background: #fff; color: #0b8; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.3s, color 0.3s; }
+#hero .button:hover { background: #0b8; color: white; }
 
 /* About */
 .cat-photo { width:200px; border-radius:12px; margin-top:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
-section { background:#fff; padding:3rem 1rem; margin-bottom:2rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
+
+section {
+  background:#fff;
+  padding:3rem 1rem;
+  margin-bottom:2rem;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
 
 /* Projects */
 .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem; }
 .card { background:#fff; padding:1.5rem; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); transition:transform 0.3s, box-shadow 0.3s; }
 .card:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.12); }
 
-/* Footer */
-.site-footer { text-align:center; padding:2rem 0; background:#222; color:white; }
-
 /* Buttons */
 .button { display:inline-block; background:#0b8; color:white; padding:0.6rem 1.2rem; border-radius:6px; text-decoration:none; font-weight:600; transition:background 0.3s, transform 0.2s; }
 .button:hover { background:#09a; transform:translateY(-2px); }
+
+/* Footer */
+.site-footer { text-align:center; padding:2rem 0; background:#222; color:white; }
