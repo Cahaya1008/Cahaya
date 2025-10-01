@@ -250,3 +250,19 @@ section {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+.project-gallery {
+  display: flex;           /* lays out images in a row */
+  gap: 1rem;               /* space between images */
+  flex-wrap: wrap;         /* allows wrapping to next line */
+  justify-content: center; /* centers the gallery */
+  margin-top: 1rem;
+}
+
+.project-gallery img {
+  max-width: 250px;        /* limits image size */
+  width: 100%;             /* scales down smaller images */
+  height: auto;            /* keeps aspect ratio */
+  border-radius: 10px;     /* optional rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: block;          /* ensures proper layout */
+}
