@@ -126,14 +126,11 @@ html {
 /* ===== About Section ===== */
 .cat-photo {
   display: block;
-  width: 200px;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
   border-radius: 12px;
-  margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  position: relative;
-  z-index: 3;
 }
 
 /* ===== Generic Sections ===== */
