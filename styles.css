@@ -125,15 +125,14 @@ html {
 
 /* ===== About Section ===== */
 .cat-photo {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 2rem auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-width: 300px;  /* limits size */
+  height: auto;      /* keeps aspect ratio */
+  display: block;    /* ensures proper centering */
+  margin: 0 auto;    /* centers image */
+  border-radius: 10px; /* optional: rounded corners */
 }
 .cat-figure {
-  text-align: center;
+  text-align: center; /* centers caption text */
   margin: 2rem auto;
 }
 
