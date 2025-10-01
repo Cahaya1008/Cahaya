@@ -1,4 +1,4 @@
-/* General page styles */
+/* ===== General Page Styles ===== */
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
@@ -8,7 +8,7 @@ body {
 }
 
 html {
-  scroll-behavior: smooth; /* smooth scroll for project links */
+  scroll-behavior: smooth; /* smooth scrolling for anchor links */
 }
 
 .container {
@@ -17,9 +17,9 @@ html {
   margin: 0 auto;
 }
 
-/* Header */
+/* ===== Header ===== */
 .site-header {
-  background: #0b8;
+  background: #0b8; /* teal header */
   color: white;
   padding: 1rem 0;
   position: sticky;
@@ -27,32 +27,54 @@ html {
   z-index: 100;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.site-header .brand { font-weight: 700; font-size: 1.5rem; margin-left: 1rem; }
-.site-header nav { display: flex; gap: 1.5rem; margin-right: 1rem; }
-.site-header nav a { color: white; text-decoration: none; font-weight: 600; transition: color 0.3s; }
-.site-header nav a:hover { color: #fff7c0; }
+.site-header .brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
 
-/* Hero */
+.site-header nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-right: 1rem;
+}
+
+.site-header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.site-header nav a:hover {
+  color: #fff7c0;
+}
+
+/* ===== Hero Section ===== */
 #hero {
   position: relative;
   text-align: center;
   padding: 7rem 1rem;
-  color: white;
   border-radius: 12px;
   margin-bottom: 2rem;
+  overflow: hidden; /* ensures the video stays contained */
+  color: white;
 }
 
 .hero-video {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  width: auto;
   height: 100%;
+  min-width: 100%;
+  transform: translateX(-50%);
   object-fit: cover;
-  object-position: center 70%; /* adjust vertical focus */
+  object-position: center 60%; /* adjust vertical focus for piano */
   z-index: 1;
   border-radius: 12px;
 }
@@ -68,31 +90,117 @@ html {
   border-radius: 12px;
 }
 
-#hero h1, #hero p, #hero .button { position: relative; z-index: 3; }
-#hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-#hero p { font-size: 1.25rem; margin-bottom: 2rem; }
-#hero .button { display: inline-block; background: #fff; color: #0b8; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.3s, color 0.3s; }
-#hero .button:hover { background: #0b8; color: white; }
-
-/* About */
-.cat-photo { width:200px; border-radius:12px; margin-top:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
-
-section {
-  background:#fff;
-  padding:3rem 1rem;
-  margin-bottom:2rem;
-  border-radius:12px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+#hero h1,
+#hero p,
+#hero .button {
+  position: relative;
+  z-index: 3;
 }
 
-/* Projects */
-.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem; }
-.card { background:#fff; padding:1.5rem; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); transition:transform 0.3s, box-shadow 0.3s; }
-.card:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.12); }
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
-/* Buttons */
-.button { display:inline-block; background:#0b8; color:white; padding:0.6rem 1.2rem; border-radius:6px; text-decoration:none; font-weight:600; transition:background 0.3s, transform 0.2s; }
-.button:hover { background:#09a; transform:translateY(-2px); }
+#hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
 
-/* Footer */
-.site-footer { text-align:center; padding:2rem 0; background:#222; color:white; }
+#hero .button {
+  display: inline-block;
+  background: #fff;
+  color: #0b8;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s;
+}
+
+#hero .button:hover {
+  background: #0b8;
+  color: white;
+}
+
+/* ===== About Section ===== */
+.cat-photo {
+  display: block;
+  width: 200px;
+  border-radius: 12px;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 3;
+}
+
+/* ===== Generic Sections ===== */
+section {
+  background: #fff;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: visible; /* ensures children like images are visible */
+}
+
+/* ===== Projects Grid ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* ===== Buttons ===== */
+.button {
+  display: inline-block;
+  background: #0b8;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background: #09a;
+  transform: translateY(-2px);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: #222;
+  color: white;
+}
+
+/* ===== Responsive YouTube Embeds ===== */
+.youtube-videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.youtube-videos iframe {
+  flex: 1 1 300px;
+  max-width: 560px;
+  height: 315px;
+}
